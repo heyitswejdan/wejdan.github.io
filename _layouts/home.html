@@ -11,7 +11,7 @@ title: مدونة مساعد
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ page.list_title | default: "ما نُشر" }}</h2>
     <ul class="post-list">
       {%- for post in site.posts reversed-%}
       <li>
@@ -22,9 +22,7 @@ title: مدونة مساعد
             {{ post.title | escape }}
           </a>
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
+        {{ post.content }}
       </li>
       {%- endfor -%}
     </ul>
