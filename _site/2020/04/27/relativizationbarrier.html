@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>النسبية وعلوم الحاسب | مدونة مساعد</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="النسبية وعلوم الحاسب" />
+<meta property="og:locale" content="ar" />
+<meta name="description" content="أول مرة أتذوق جمال الرياضيات كان عند قراءتي لنظرية غودل الشهيرة (Gödel’s Incompleteness Theorem) والتي تقتضي عدم وجود نظام إثبات يستطيع إثبات جميع النظريات الرياضية. ولست هنا لأتكلم عن هذه النظرية 1 (صدقوني لقد حاولت، لكني لا أملك العلم الكافي ولا اللغة السهلة التي تؤهلني لهذه المهمة).. ولكني هنا لأشارككم theme في الرياضيات يثير إعجابي دائمًا، وهو إثبات استحالة أمرٍ ما. كتاب رائع في هذا الصدد هو Gödel, Escher, Bach by Douglas Hofstadter وهو أكثر من مجرد شرح لنظرية غودل. &#8617;" />
+<meta property="og:description" content="أول مرة أتذوق جمال الرياضيات كان عند قراءتي لنظرية غودل الشهيرة (Gödel’s Incompleteness Theorem) والتي تقتضي عدم وجود نظام إثبات يستطيع إثبات جميع النظريات الرياضية. ولست هنا لأتكلم عن هذه النظرية 1 (صدقوني لقد حاولت، لكني لا أملك العلم الكافي ولا اللغة السهلة التي تؤهلني لهذه المهمة).. ولكني هنا لأشارككم theme في الرياضيات يثير إعجابي دائمًا، وهو إثبات استحالة أمرٍ ما. كتاب رائع في هذا الصدد هو Gödel, Escher, Bach by Douglas Hofstadter وهو أكثر من مجرد شرح لنظرية غودل. &#8617;" />
+<link rel="canonical" href="http://localhost:4000/2020/04/27/relativizationbarrier.html" />
+<meta property="og:url" content="http://localhost:4000/2020/04/27/relativizationbarrier.html" />
+<meta property="og:site_name" content="مدونة مساعد" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-04-27T00:00:00+03:00" />
+<script type="application/ld+json">
+{"dateModified":"2020-04-27T00:00:00+03:00","datePublished":"2020-04-27T00:00:00+03:00","url":"http://localhost:4000/2020/04/27/relativizationbarrier.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/04/27/relativizationbarrier.html"},"description":"أول مرة أتذوق جمال الرياضيات كان عند قراءتي لنظرية غودل الشهيرة (Gödel’s Incompleteness Theorem) والتي تقتضي عدم وجود نظام إثبات يستطيع إثبات جميع النظريات الرياضية. ولست هنا لأتكلم عن هذه النظرية 1 (صدقوني لقد حاولت، لكني لا أملك العلم الكافي ولا اللغة السهلة التي تؤهلني لهذه المهمة).. ولكني هنا لأشارككم theme في الرياضيات يثير إعجابي دائمًا، وهو إثبات استحالة أمرٍ ما. كتاب رائع في هذا الصدد هو Gödel, Escher, Bach by Douglas Hofstadter وهو أكثر من مجرد شرح لنظرية غودل. &#8617;","@type":"BlogPosting","headline":"النسبية وعلوم الحاسب","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="مدونة مساعد" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">مدونة مساعد</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">النسبية وعلوم الحاسب</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-04-27T00:00:00+03:00" itemprop="datePublished">Apr 27, 2020
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>أول مرة أتذوق جمال الرياضيات كان عند قراءتي لنظرية غودل الشهيرة (Gödel’s Incompleteness Theorem) والتي تقتضي عدم وجود نظام إثبات يستطيع إثبات جميع النظريات الرياضية. ولست هنا لأتكلم عن هذه النظرية <sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup> (صدقوني لقد حاولت، لكني لا أملك العلم الكافي ولا اللغة السهلة التي تؤهلني لهذه المهمة).. ولكني هنا لأشارككم theme في الرياضيات يثير إعجابي دائمًا، وهو إثبات استحالة أمرٍ ما.</p>
+
+<p>لب إثبات نظرية غودل هو مقدرته على التعبير عن العبارة: “هذه العبارة لا يمكن إثباتها” كنظرية رياضية. وهذه الطريقة شبيهة بإثباتٍ لكانتور (Cantor’s uncountability theorem)<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup> الذي أثبت عدم قابلية الأعداد الحقيقية (0.5، 0.33…، ط) للعد، أو بتعبير آخر أن “عدد” الأعداد الحقيقية أكبر من “عدد” الأعداد الصحيحة. أولا، لنلاحظ أن كلتا النظريتين تحاولان إثبات أن مجموعة ما أكبر من أخرى: فنظرية غودل تقول أن مجموعة النظريات الرياضية أكبر من مجموعة النظريات التي يمكن إثباتها (بمعنى: يوجد نظرية لا يمكن إثباتها) ونظرية كانتور تقول أن مجموعة الأعداد الحقيقية أكبر من مجموعة الأعداد الصحيحة. والملاحظة الأخرى هي أن طريقة إثبات كلتا النظريتين يقوم على استغلال خاصية معينة للمجموعة الصغرى ومحاولة إيجاد/بناء شيء يخالف هذه الخاصية، ففي نظرية غودل هذه الخاصية هي “إمكانية الإثبات” وفي الأخرى “إمكانية سرد الأعداد”..</p>
+
+<p>وقد اشتهرت هذه الطريقة في الإثبات والتي تسمى بـ diagonalization method<sup id="fnref:4"><a href="#fn:4" class="footnote">3</a></sup>. حتى أن تورنغ استعملها في نظريته الشهيرة (undecidability theorem)<sup id="fnref:2:1"><a href="#fn:2" class="footnote">2</a></sup> التي تقول بوجود “مشاكل” لا يمكن لأي كمبيوتر حلها. ويمكن النظر لهذه الطريقة على أنها تبدأ بافتراض قدرة محاكاة وتوقع خاصية/ناتج شيء معين (ففي نظرية غودل افترضنا أننا نمتلك القدرة على الحكم على عبارةٍ ما بأنها قابلة للإثبات أو لا، وفي نظرية تورنغ نفترض قدرتنا على معرفة ما إذا كان برنامجٌ ما يستطيع حل مشكلةٍ ما عند معطًى ما).. ثم استخدام هذه القدرة على المحاكاة لبناء شيء يخالف جميع التوقعات ومن ثم التوصل إلى تناقض. والنظر إلى الـdiagonalization method بهذه الطريقة، هو ما مكّن باحثي النتيجة التالية من توصل إلى نتيجتهم.</p>
+
+<p><strong>بعد هذه المقدمة الطويلة، نأتي إلى لب موضوعنا:</strong> إن كانت النظريات السابقة أثارت اهتمامي لإثباتها استحالة حدوث أمرٍ ما، فالنظرية التالية أحق بالإهتمام.. كيف لا وهي قد أثبتت استحالة [هوامش على استحالة] استخدام هذه الطريقة، التي طالما استُخدمت لإثبات استحالة الكثير من الأمور، لحل المشكلة المشهورة P vs. NP (!)</p>
+
+<p><a href="https://althukairm.github.io/2019/12/07/complexity.html" target="_blank">سؤال P vs. NP من أكثر الأسئلة الرياضية شهرةً</a>، وقد يبدو سؤالا مثاليا لاستخدام الطريقة سابقة الذكر لأننا نريد أن نثبت أن المجموعة NP أكبر من المجموعة P..</p>
+
+<p>ولكن BGS<sup id="fnref:3"><a href="#fn:3" class="footnote">4</a></sup> استطاعوا أن يعبروا عن طريقة الإثبات diagonialization تعبيرًا رياضيا، وذلك <a href="https://althukairm.github.io/2019/12/07/complexity.html" target="_blank">بابتكار نموذجً حسابي (model of computation)</a> أُعرِبه بـ “آلة تورنغ عالمة الغيب” (Oracle Turing Machine) والذي يعمم طريقة الإثبات هذه (كما تعمم آلة تورنغ مثلا حواسيب اليوم) ثم استخدام هذا النموذج في تقصي افتراض أن P = NP وافتراض أن P != NP وفي كلا الافتراضين يتوصلون إلى تناقض.. وبما أن أحد هذين الافتراضين يجب أن يكون صحيحا، يتضح أن هذه الطريقة (diagonlization) لن توصل إلى نتيجة.</p>
+
+<p>سميت هذه النتيجة بـ the relativization barrier وهو مايعني أحد حواجز حل سؤال P vs. NP.. وأما سبب تسميته بـrelativization وهو سر عنوان هذه التدوينة فيرجع إلى كون آلة تورنغ عالمة الغيب لا تعلم كل الغيب بالضرورة وإنما بعضه، و<strong>نسبةً</strong> إلى هذا الغيب الذي تعلمه يختلف كون P = NP أو P != NP.</p>
+
+<p>أتى بعد الـrelativization barrier حاجزين أخريين: هما الـnatural proofs وalgebrization ولعلي أكتب عنهما لاحقًا بإذن الله.. وأفصل في هذه النتيجة أكثر لأن جمالها له أبعاد وهذه التدوينة تكاد لم تلمس قشر بُعد واحد من أبعادها.. لكن عزاءنا أن هذه التدوينة مقدمة فقط. وكل عام وأنتم بخير!</p>
+
+<h1 id="مصادر">مصادر</h1>
+
+<p>هذه التدوينة مستلهمة (وإن صح التعبير مترجمة بتصرف) من كتاب <a href="https://www.math.ias.edu/avi/book">Mathematics and Computation</a> بالتحديد الفصل 5.1 من نسخة أغسطس 2019.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>كتاب رائع في هذا الصدد هو Gödel, Escher, Bach by Douglas Hofstadter وهو أكثر من مجرد شرح لنظرية غودل. <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>كتاب رائع أرشحه يشرح نظرتا كانتور وتورنغ هو The Annotated Turing by Charles Petzold <a href="#fnref:2" class="reversefootnote">&#8617;</a> <a href="#fnref:2:1" class="reversefootnote">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:4">
+      <p>نتيجة أخرى تُوصل لها بهذه الطريقة هي الـ<a href="https://en.wikipedia.org/wiki/Time_hierarchy_theorem" target="_blank">Time-hierarchy theorem</a>. <a href="#fnref:4" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>T. Baker, J. Gill, and R. Solovay. Relativizations of the P =? NP question. <em>SIAM Journal on Computing</em>, 4:431–442, 1975. <a href="#fnref:3" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/2020/04/27/relativizationbarrier.html" hidden></a>
+</article>
+
+      </div>
+    </main>
+
+  </body>
+
+</html>

@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ar"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ar" /><updated>2020-03-22T22:46:28+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">مدونة مساعد</title><entry><title type="html">تلك الفكرة</title><link href="http://localhost:4000/2020/03/22/readingandwriting.html" rel="alternate" type="text/html" title="تلك الفكرة" /><published>2020-03-22T00:00:00+03:00</published><updated>2020-03-22T00:00:00+03:00</updated><id>http://localhost:4000/2020/03/22/readingandwriting</id><content type="html" xml:base="http://localhost:4000/2020/03/22/readingandwriting.html">&lt;p&gt;قبل 5 سنوات تقريبا سألني أحد الأصدقاء “لماذا تقرأ؟”، وأجبته حينها إجابة أتذكرها إلى الآن. كان جوابي هو أن القراءة بحث دائم عن “تلك الفكرة”..&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ar"><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ar" /><updated>2020-04-28T00:29:50+03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">مدونة مساعد</title><entry><title type="html">النسبية وعلوم الحاسب</title><link href="http://localhost:4000/2020/04/27/relativizationbarrier.html" rel="alternate" type="text/html" title="النسبية وعلوم الحاسب" /><published>2020-04-27T00:00:00+03:00</published><updated>2020-04-27T00:00:00+03:00</updated><id>http://localhost:4000/2020/04/27/relativizationbarrier</id><content type="html" xml:base="http://localhost:4000/2020/04/27/relativizationbarrier.html">&lt;p&gt;أول مرة أتذوق جمال الرياضيات كان عند قراءتي لنظرية غودل الشهيرة (Gödel’s Incompleteness Theorem) والتي تقتضي عدم وجود نظام إثبات يستطيع إثبات جميع النظريات الرياضية. ولست هنا لأتكلم عن هذه النظرية &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; (صدقوني لقد حاولت، لكني لا أملك العلم الكافي ولا اللغة السهلة التي تؤهلني لهذه المهمة).. ولكني هنا لأشارككم theme في الرياضيات يثير إعجابي دائمًا، وهو إثبات استحالة أمرٍ ما.&lt;/p&gt;
+
+&lt;p&gt;لب إثبات نظرية غودل هو مقدرته على التعبير عن العبارة: “هذه العبارة لا يمكن إثباتها” كنظرية رياضية. وهذه الطريقة شبيهة بإثباتٍ لكانتور (Cantor’s uncountability theorem)&lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; الذي أثبت عدم قابلية الأعداد الحقيقية (0.5، 0.33…، ط) للعد، أو بتعبير آخر أن “عدد” الأعداد الحقيقية أكبر من “عدد” الأعداد الصحيحة. أولا، لنلاحظ أن كلتا النظريتين تحاولان إثبات أن مجموعة ما أكبر من أخرى: فنظرية غودل تقول أن مجموعة النظريات الرياضية أكبر من مجموعة النظريات التي يمكن إثباتها (بمعنى: يوجد نظرية لا يمكن إثباتها) ونظرية كانتور تقول أن مجموعة الأعداد الحقيقية أكبر من مجموعة الأعداد الصحيحة. والملاحظة الأخرى هي أن طريقة إثبات كلتا النظريتين يقوم على استغلال خاصية معينة للمجموعة الصغرى ومحاولة إيجاد/بناء شيء يخالف هذه الخاصية، ففي نظرية غودل هذه الخاصية هي “إمكانية الإثبات” وفي الأخرى “إمكانية سرد الأعداد”..&lt;/p&gt;
+
+&lt;p&gt;وقد اشتهرت هذه الطريقة في الإثبات والتي تسمى بـ diagonalization method&lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt;. حتى أن تورنغ استعملها في نظريته الشهيرة (undecidability theorem)&lt;sup id=&quot;fnref:2:1&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; التي تقول بوجود “مشاكل” لا يمكن لأي كمبيوتر حلها. ويمكن النظر لهذه الطريقة على أنها تبدأ بافتراض قدرة محاكاة وتوقع خاصية/ناتج شيء معين (ففي نظرية غودل افترضنا أننا نمتلك القدرة على الحكم على عبارةٍ ما بأنها قابلة للإثبات أو لا، وفي نظرية تورنغ نفترض قدرتنا على معرفة ما إذا كان برنامجٌ ما يستطيع حل مشكلةٍ ما عند معطًى ما).. ثم استخدام هذه القدرة على المحاكاة لبناء شيء يخالف جميع التوقعات ومن ثم التوصل إلى تناقض. والنظر إلى الـdiagonalization method بهذه الطريقة، هو ما مكّن باحثي النتيجة التالية من توصل إلى نتيجتهم.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;بعد هذه المقدمة الطويلة، نأتي إلى لب موضوعنا:&lt;/strong&gt; إن كانت النظريات السابقة أثارت اهتمامي لإثباتها استحالة حدوث أمرٍ ما، فالنظرية التالية أحق بالإهتمام.. كيف لا وهي قد أثبتت استحالة [هوامش على استحالة] استخدام هذه الطريقة، التي طالما استُخدمت لإثبات استحالة الكثير من الأمور، لحل المشكلة المشهورة P vs. NP (!)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://althukairm.github.io/2019/12/07/complexity.html&quot; target=&quot;_blank&quot;&gt;سؤال P vs. NP من أكثر الأسئلة الرياضية شهرةً&lt;/a&gt;، وقد يبدو سؤالا مثاليا لاستخدام الطريقة سابقة الذكر لأننا نريد أن نثبت أن المجموعة NP أكبر من المجموعة P..&lt;/p&gt;
+
+&lt;p&gt;ولكن BGS&lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt; استطاعوا أن يعبروا عن طريقة الإثبات diagonialization تعبيرًا رياضيا، وذلك &lt;a href=&quot;https://althukairm.github.io/2019/12/07/complexity.html&quot; target=&quot;_blank&quot;&gt;بابتكار نموذجً حسابي (model of computation)&lt;/a&gt; أُعرِبه بـ “آلة تورنغ عالمة الغيب” (Oracle Turing Machine) والذي يعمم طريقة الإثبات هذه (كما تعمم آلة تورنغ مثلا حواسيب اليوم) ثم استخدام هذا النموذج في تقصي افتراض أن P = NP وافتراض أن P != NP وفي كلا الافتراضين يتوصلون إلى تناقض.. وبما أن أحد هذين الافتراضين يجب أن يكون صحيحا، يتضح أن هذه الطريقة (diagonlization) لن توصل إلى نتيجة.&lt;/p&gt;
+
+&lt;p&gt;سميت هذه النتيجة بـ the relativization barrier وهو مايعني أحد حواجز حل سؤال P vs. NP.. وأما سبب تسميته بـrelativization وهو سر عنوان هذه التدوينة فيرجع إلى كون آلة تورنغ عالمة الغيب لا تعلم كل الغيب بالضرورة وإنما بعضه، و&lt;strong&gt;نسبةً&lt;/strong&gt; إلى هذا الغيب الذي تعلمه يختلف كون P = NP أو P != NP.&lt;/p&gt;
+
+&lt;p&gt;أتى بعد الـrelativization barrier حاجزين أخريين: هما الـnatural proofs وalgebrization ولعلي أكتب عنهما لاحقًا بإذن الله.. وأفصل في هذه النتيجة أكثر لأن جمالها له أبعاد وهذه التدوينة تكاد لم تلمس قشر بُعد واحد من أبعادها.. لكن عزاءنا أن هذه التدوينة مقدمة فقط. وكل عام وأنتم بخير!&lt;/p&gt;
+
+&lt;h1 id=&quot;مصادر&quot;&gt;مصادر&lt;/h1&gt;
+
+&lt;p&gt;هذه التدوينة مستلهمة (وإن صح التعبير مترجمة بتصرف) من كتاب &lt;a href=&quot;https://www.math.ias.edu/avi/book&quot;&gt;Mathematics and Computation&lt;/a&gt; بالتحديد الفصل 5.1 من نسخة أغسطس 2019.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;كتاب رائع في هذا الصدد هو Gödel, Escher, Bach by Douglas Hofstadter وهو أكثر من مجرد شرح لنظرية غودل. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;كتاب رائع أرشحه يشرح نظرتا كانتور وتورنغ هو The Annotated Turing by Charles Petzold &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:2:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:4&quot;&gt;
+      &lt;p&gt;نتيجة أخرى تُوصل لها بهذه الطريقة هي الـ&lt;a href=&quot;https://en.wikipedia.org/wiki/Time_hierarchy_theorem&quot; target=&quot;_blank&quot;&gt;Time-hierarchy theorem&lt;/a&gt;. &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;T. Baker, J. Gill, and R. Solovay. Relativizations of the P =? NP question. &lt;em&gt;SIAM Journal on Computing&lt;/em&gt;, 4:431–442, 1975. &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name></name></author><summary type="html">أول مرة أتذوق جمال الرياضيات كان عند قراءتي لنظرية غودل الشهيرة (Gödel’s Incompleteness Theorem) والتي تقتضي عدم وجود نظام إثبات يستطيع إثبات جميع النظريات الرياضية. ولست هنا لأتكلم عن هذه النظرية 1 (صدقوني لقد حاولت، لكني لا أملك العلم الكافي ولا اللغة السهلة التي تؤهلني لهذه المهمة).. ولكني هنا لأشارككم theme في الرياضيات يثير إعجابي دائمًا، وهو إثبات استحالة أمرٍ ما. كتاب رائع في هذا الصدد هو Gödel, Escher, Bach by Douglas Hofstadter وهو أكثر من مجرد شرح لنظرية غودل. &amp;#8617;</summary></entry><entry><title type="html">تلك الفكرة</title><link href="http://localhost:4000/2020/03/22/readingandwriting.html" rel="alternate" type="text/html" title="تلك الفكرة" /><published>2020-03-22T00:00:00+03:00</published><updated>2020-03-22T00:00:00+03:00</updated><id>http://localhost:4000/2020/03/22/readingandwriting</id><content type="html" xml:base="http://localhost:4000/2020/03/22/readingandwriting.html">&lt;p&gt;قبل 5 سنوات تقريبا سألني أحد الأصدقاء “لماذا تقرأ؟”، وأجبته حينها إجابة أتذكرها إلى الآن. كان جوابي هو أن القراءة بحث دائم عن “تلك الفكرة”..&lt;/p&gt;
 
 &lt;p&gt;تعرف هذيك الفكرة اللي تأسرك بجمالها وأناقتها؟ هذيك الفكرة اللي من بعدها تبدأ ترى بِها لا بعينيك؟ شيء شبيه بمقولة: “إذا امتلكت مطرقة فسترى كل شيء مسمارا”..&lt;/p&gt;
 
@@ -149,27 +184,4 @@
 
 &lt;p&gt;لو الفكرة مو واضحة، ماراح تقدر تعبر عنها بدقة. وش أعني لما أقول التعبير بدقة؟ يعني إن كل المتلقين/القراء تتكون بذهنهم صورة (شبه) مطابقة للصورة اللي ببالك. فلو كانت الصورة اللي ببالك ينقصها بعض الملامح، أفضل شي راح تقدر تسويه إنك توصل صورة ناقصة للمتلقي… الي بدوره راح يحاول سد هالفراغات، وكل متلقي راح يسدها بطريقة مختلفة. ويطلع بالنهاية كل قارئ خرج بتصور مختلف تماما عما كنت تقصده. ولهذا، أحس إذا قدرت تعبر تعبير دقيق عن فكرة ما فهذا يعني -منطقيا- إن الفكرة ببالك واضحة.&lt;/p&gt;
 
-&lt;p&gt;طبعا كون عندك أفكار واضحة هذي قيمة بحد ذاتها :P&lt;/p&gt;</content><author><name></name></author><summary type="html">السلام عليكم،</summary></entry><entry><title type="html">الحوسبة، الفلسفة، والإنسان</title><link href="http://localhost:4000/2019/12/07/complexity.html" rel="alternate" type="text/html" title="الحوسبة، الفلسفة، والإنسان" /><published>2019-12-07T00:00:00+03:00</published><updated>2019-12-07T00:00:00+03:00</updated><id>http://localhost:4000/2019/12/07/complexity</id><content type="html" xml:base="http://localhost:4000/2019/12/07/complexity.html">&lt;p&gt;السلام عليكم،&lt;/p&gt;
-
-&lt;p&gt;في هذه التدوينة أحب أشارككم سبب شغفي بنظرية الحوسبة.&lt;/p&gt;
-
-&lt;p&gt;علوم الحاسب النظرية(Theoretical Computer Science) لها عدة أقسام وفروع. أحدها هو نظرية الحوسبة (Theory of Computation). وهذا الفرع يدرس الحوسبة بأعم صورة ممكنة، بغض النظر عن الجهاز المستخدم مثلا. بل يُعنى بدراسة أي “حاسب آلي” من خلال دراسة نموذج (model) يُعتقد بأنه يطوي تعريف الحوسبة في ذاته، وهذا النموذج هو “آلة تورنغ” (Turing Machine). ميزة آلة تورنغ أنها يمكنها محاكاة(simulate) أي حاسب. فأي شيء تستطيع عمله على جوالك، أو لابتوبك، أو التابلت يمكن عمله نظريا على آلة تورنغ. أيضا، هناك معيار يسمى بالـTuring-completeness. وأي حاسب يحقق هذا المعيار، يستطيع محاكاة أي برنامج ينفذ في آلة تورنغ. وحواسيبنا تحقق هذا المعيار.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;إذا، أي نتيجة نتوصل لها عبر دراسة آلة تورنغ يمكن تعميمها على جميع الحواسيب، ولهذا يسمى العلم المعني بدراسة آلة تورنغ (والنماذج الأخرى) بنظرية الحوسبة لأنه علم يهتم بالحوسبة كمفهوم مجرد من أي اعتبارات مادية.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;مع امتلاكنا لهذه الأداة، نستطيع الإجابة عن أسئلة مثل “ماهي حدود الحوسبة؟” أو مالذي يمكن أو لايمكن حسابه، وهو بالفعل ماتم الإجابة عليه.&lt;/p&gt;
-
-&lt;p&gt;أحد الأسئلة القائمة إلى الآن، والأكثر شهرة هو سؤال P vs. NP. ولب هذا السؤال باختصار، هو: هل كل مايمكن التحقق من صحته بـ”سهولة” يمكن أن نتوصل له بسهولة؟
-مثلا: يمكن التحقق من صحة إثبات عبارة رياضية بسهولة، من خلال تتبع صحة البرهان خطوة بخطوة. هل هذا يعني أنه يوجد طريقة سهلة لإثبات هذه العبارة الرياضية؟&lt;/p&gt;
-
-&lt;p&gt;يوجد أسئلة كثيرة قائمة لها نفس طابع هذا السؤال، ولعلي أتبع هذه التدوينة بأخرى تحتوي على أهم النتائج والأسئلة في هذا المجال، لكن هدف هذه التدوينة هو مشاركة سبب انبهاري بهذا العلم، وأعتقد أني أعطيت مادة كافية تمكنني من الإفصاح عن سر هذا الإعجاب:&lt;/p&gt;
-
-&lt;p&gt;الأسئلة والنتائج في هذا الباب من علوم الحاسب لا تمس الحاسب فقط، بل تكاد تكون نتائج فلسفية في طبيعتها.&lt;/p&gt;
-
-&lt;p&gt;فلو اعتقدت أن الحاسب يمثل عقل البشر (وهذا اعتقاد سائد بعد انتشار “الذكاء الاصطناعي”، بغض النظر عن صحته)، فأنت بدراستك للحوسبة تدرس -بطريقة ما- سر الوعي لدى الإنسان (consciousness).&lt;/p&gt;
-
-&lt;p&gt;ولو اعتقدت أن المعرفة التي سنتوصل لها كبشر محصورة بما يمكن حسابه، فبدراستك للحوسبة أنت تدرس -بطريقة ما- فلسفة المعرفة (epistemology).&lt;/p&gt;
-
-&lt;p&gt;والسلام عليكم.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;الحديث عن هذا الموضوع شيق، المدونة لاتدعم التعليقات حاليا. أرحب بتعليقاتكم على حسابي في تويتر &lt;a href=&quot;https://www.twitter.com/AlThukairM&quot;&gt;@AlThukairM&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">السلام عليكم،</summary></entry></feed>
+&lt;p&gt;طبعا كون عندك أفكار واضحة هذي قيمة بحد ذاتها :P&lt;/p&gt;</content><author><name></name></author><summary type="html">السلام عليكم،</summary></entry></feed>
