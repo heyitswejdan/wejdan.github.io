@@ -81,9 +81,13 @@ table td { border: 1px solid #e8e8e8; }
 /* Table of contents style */
 #markdown-toc::before { content: "Contents"; font-weight: bold; }
 
-#markdown-toc ul { list-style: decimal; }
+#markdown-toc { border: 1px solid #aaa; padding: 1.5em; padding-top: 0.5em; padding-bottom: 0.5em; list-style: none; display: inline-block; counter-reset: level-one; }
 
-#markdown-toc { border: 1px solid #aaa; padding: 1.5em; list-style: decimal; display: inline-block; }
+#markdown-toc li::before { counter-increment: level-one; content: counters(level-one, ".") " "; }
+
+#markdown-toc ul { list-style: none; margin-left: 1em; counter-reset: level-two; }
+
+#markdown-toc ul li::before { counter-increment: level-two; content: counters(level-one, ".") "." counters(level-two, ".") " "; }
 
 /** Site header */
 .site-header { border-top: 5px solid #424242; border-bottom: 1px solid #e8e8e8; min-height: 55.95px; position: relative; }

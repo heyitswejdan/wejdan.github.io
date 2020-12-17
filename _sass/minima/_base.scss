@@ -278,13 +278,32 @@ table {
 
 
 // Using numbers instead of bullets for listing
-#markdown-toc ul {
-  list-style: decimal;
-}
+
 
 #markdown-toc {
   border: 1px solid #aaa;
   padding: 1.5em;
-  list-style: decimal;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  list-style: none;
   display: inline-block;
+  counter-reset: level-one;
 }
+
+#markdown-toc li::before {
+  counter-increment: level-one;
+  content: counters(level-one, '.') ' ';
+}
+
+#markdown-toc ul {
+  list-style: none;
+  margin-left: 1em;
+  counter-reset: level-two;
+}
+
+#markdown-toc ul li::before {
+  counter-increment: level-two;
+  content: counters(level-one, '.') '.' counters(level-two, '.') ' ';
+}
+
+
