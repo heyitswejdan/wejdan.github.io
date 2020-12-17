@@ -1,6 +1,6 @@
 ---
 layout: article
-title: "Everything I know about proof complexity"
+title: "Everything I Know About Proof Complexity"
 ---
 
 Heey-o!

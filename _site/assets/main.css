@@ -78,6 +78,13 @@ table th { background-color: #f0f0f0; border: 1px solid #dedede; border-bottom-c
 
 table td { border: 1px solid #e8e8e8; }
 
+/* Table of contents style */
+#markdown-toc::before { content: "Contents"; font-weight: bold; }
+
+#markdown-toc ul { list-style: decimal; }
+
+#markdown-toc { border: 1px solid #aaa; padding: 1.5em; list-style: decimal; display: inline-block; }
+
 /** Site header */
 .site-header { border-top: 5px solid #424242; border-bottom: 1px solid #e8e8e8; min-height: 55.95px; position: relative; }
 
