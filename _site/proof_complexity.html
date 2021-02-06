@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Everything I Know About Proof Complexity | مدونة مساعد</title>
+<title>Everything I Know About Proof Complexity (so far…) | مدونة مساعد</title>
 <meta name="generator" content="Jekyll v4.0.1" />
-<meta property="og:title" content="Everything I Know About Proof Complexity" />
+<meta property="og:title" content="Everything I Know About Proof Complexity (so far…)" />
+<meta name="author" content="Mosaad Al Thokair" />
 <meta property="og:locale" content="ar" />
 <link rel="canonical" href="http://localhost:4000/proof_complexity.html" />
 <meta property="og:url" content="http://localhost:4000/proof_complexity.html" />
 <meta property="og:site_name" content="مدونة مساعد" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-12-29T00:00:00+03:00" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/proof_complexity.html","headline":"Everything I Know About Proof Complexity","@type":"WebPage","@context":"https://schema.org"}</script>
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/proof_complexity.html"},"url":"http://localhost:4000/proof_complexity.html","author":{"@type":"Person","name":"Mosaad Al Thokair"},"headline":"Everything I Know About Proof Complexity (so far…)","dateModified":"2020-12-29T00:00:00+03:00","datePublished":"2020-12-29T00:00:00+03:00","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="مدونة مساعد" /></head>
 <body><header class="site-header" role="banner">
@@ -22,62 +29,232 @@
   </div>
 </header>
 <main class="page-content" aria-label="Content">
-      <div class="wrapper"><h1 class="page-heading">Everything I Know About Proof Complexity</h1><p>Heey-o!</p>
 
-<ul id="markdown-toc">
-  <li><a href="#one" id="markdown-toc-one">One</a>    <ul>
-      <li><a href="#one1" id="markdown-toc-one1">One.1</a>        <ul>
-          <li><a href="#one11" id="markdown-toc-one11">One.1.1</a></li>
-          <li><a href="#one12" id="markdown-toc-one12">One.1.2</a></li>
-        </ul>
-      </li>
-      <li><a href="#one2" id="markdown-toc-one2">One.2</a></li>
+
+      <div class="wrapper">
+
+        <header class="post-header">
+          <h1 class="post-title p-name" itemprop="name headline">Everything I Know About Proof Complexity (so far...)</h1>
+          <p class="post-meta">
+                <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span class="p-author h-card" itemprop="name">Mosaad Al Thokair</span></span></br><time class="dt-published" datetime="2020-12-29T00:00:00+03:00" itemprop="datePublished">
+              Dec 29, 2020
+            </time>
+
+           
+          </p>
+        </header>
+
+
+        <ul id="markdown-toc">
+  <li><a href="#introduction" id="markdown-toc-introduction">Introduction</a>    <ul>
+      <li><a href="#why-am-i-writing-this-article" id="markdown-toc-why-am-i-writing-this-article">Why am I writing this article?</a></li>
+      <li><a href="#why-should-you-read-it" id="markdown-toc-why-should-you-read-it">Why should you read it?</a></li>
+      <li><a href="#why-should-you-care-about-proof-complexity" id="markdown-toc-why-should-you-care-about-proof-complexity">Why should you care about proof complexity?</a></li>
+      <li><a href="#what-is-proof-complexity" id="markdown-toc-what-is-proof-complexity">What is proof complexity?</a></li>
     </ul>
   </li>
-  <li><a href="#two" id="markdown-toc-two">Two</a>    <ul>
-      <li><a href="#two1" id="markdown-toc-two1">Two.1</a></li>
-      <li><a href="#two2" id="markdown-toc-two2">Two.2</a>        <ul>
-          <li><a href="#two21" id="markdown-toc-two21">Two.2.1</a></li>
-          <li><a href="#two22" id="markdown-toc-two22">Two.2.2</a>            <ul>
-              <li><a href="#two221" id="markdown-toc-two221">Two.2.2.1</a></li>
-              <li><a href="#two222" id="markdown-toc-two222">Two.2.2.2</a></li>
-            </ul>
-          </li>
-          <li><a href="#two23" id="markdown-toc-two23">Two.2.3</a></li>
-        </ul>
-      </li>
+  <li><a href="#propositional-proof-systems" id="markdown-toc-propositional-proof-systems">Propositional Proof Systems</a>    <ul>
+      <li><a href="#resolution" id="markdown-toc-resolution">Resolution</a></li>
+      <li><a href="#sequent-calculus" id="markdown-toc-sequent-calculus">Sequent Calculus</a></li>
+      <li><a href="#frege-systems" id="markdown-toc-frege-systems">Frege Systems</a></li>
+      <li><a href="#extended-frege-systems" id="markdown-toc-extended-frege-systems">Extended Frege Systems</a></li>
     </ul>
   </li>
-  <li><a href="#three" id="markdown-toc-three">Three</a></li>
+  <li><a href="#comparing-two-proof-systems-simulation" id="markdown-toc-comparing-two-proof-systems-simulation">Comparing Two Proof Systems (simulation)</a></li>
+  <li><a href="#weaker-systems-and-known-lower-bounds" id="markdown-toc-weaker-systems-and-known-lower-bounds">Weaker systems and known lower bounds</a></li>
+  <li><a href="#main-problem" id="markdown-toc-main-problem">Main Problem</a></li>
+  <li><a href="#interactive-proofs-krajicek-1995" id="markdown-toc-interactive-proofs-krajicek-1995">Interactive Proofs? [Krajicek 1995]</a></li>
 </ul>
-<h1 id="one">One</h1>
+<h1 id="introduction">Introduction</h1>
 
-<h2 id="one1">One.1</h2>
+<h2 id="why-am-i-writing-this-article">Why am I writing this article?</h2>
 
-<h3 id="one11">One.1.1</h3>
+<p>There are already many resources that explain proof complexity very well [list examples]. So why create a new one? I am doing this primarily for myself. I believe writing clarifies thinking, and publishing forces me to clean my mess and challenge my assumptions [elaborate?].</p>
 
-<h3 id="one12">One.1.2</h3>
+<p>I enjoy writing.</p>
 
-<h2 id="one2">One.2</h2>
+<p>Document my achievements. I have been reading about proof complexity for the last year. It feels good to have a product out of it. Also I am thinking of creating a series (Everything I know about …).</p>
 
-<h1 id="two">Two</h1>
+<h2 id="why-should-you-read-it">Why should you read it?</h2>
 
-<h2 id="two1">Two.1</h2>
+<p>However, I think this article might be of benefit for some people other than myself. The examples listed above are written by professors who are well-versed in proof complexity. Their writing might be hard to follow for someone just beginning. I, on the other hand, am just starting. So I will not gloss over basic definitions or concepts. Moreover, my style will be more informal and intuitive—which comes at the cost of rigour, but it is a price I am willing to pay.</p>
 
-<h2 id="two2">Two.2</h2>
+<p>There are already many good resources to get into proof complexity. I personally recommend Pitassi, Tzameret Algberaic Proof Complexity .. go read it now.. and also …. but if you do not feel like reading a lot of different articles, I will collect everything I have learned from these papers here.</p>
 
-<h3 id="two21">Two.2.1</h3>
+<p>At some point I have to switch gears from the intuituve, informal writing to the more formal style of writing. This reflects my journey in studying this topic: interest begins with vague ideas, and lofty dreams about it. Then, one has to get their hands dirty and go back to the real world and start working on messy stuff. I hope that in the first part I motivate you enough to whistand the dry nature of the second part. But feel free to stop whenever you want. You do not have to read the whole article. If you are not as interested in the specific theorems and directions I go into, feel free to stop reading <em>my</em> article and go read something that interests you.</p>
 
-<h3 id="two22">Two.2.2</h3>
+<h2 id="why-should-you-care-about-proof-complexity">Why should you care about proof complexity?</h2>
 
-<h4 id="two221">Two.2.2.1</h4>
+<p>Reflecting about the nature of proofs..</p>
 
-<h4 id="two222">Two.2.2.2</h4>
+<p>One way of reflecting about the nature of mathematics and proofs and how we think is to study how computers can think about them.</p>
 
-<h3 id="two23">Two.2.3</h3>
+<p>I like reflecting on the nature of humans. Chomsky thinks that language is the most worthy of contemplation. I blieve that understanding how we understand mathematics can illuminate the human nature. There are many ways to do that. One of them is to study the syntax of mathematics. [If we think about mathematics as a human language, then it has syntax, pragma, semantics, etc.. proof complexity, and complexity theory treats it from the syntactic POV. What other fields look at mathematics from the other linguistic features? Like: what is the study of the semantics of mathematics?]</p>
 
-<h1 id="three">Three</h1>
+<p>connection to SAT solvers</p>
 
+<p>Connection to P vs. NP</p>
+
+<p>Proof complexity is a siren. It looks deceptively easy, but in fact it is a formidable field.</p>
+
+<h2 id="what-is-proof-complexity">What is proof complexity?</h2>
+
+<p>Alright, so.. what is proof complexity all about? Well, proof complexity is about classifying propositional logic theorems according to how easy they are to prove. 
+[Q: how are two proofs for the same theorem different? Are they ‘reducible’ to one another?]
+[Q: what about statements in First Order or Second Order logic?]
+[A: according to <a href="https://www.labri.fr/perso/courcell/CoursMaster/FrickGrohe.pdf">this paper</a> FO and monadic SO logic are PSPACE-complete
+L.J. Stockmeyer, The Complexity of Decision Problems in Automata Theory, Ph.D. Thesis, Department of Electrical Engineering, MIT, 1974.</p>
+
+<p>M.Y. Vardi, The complexity of relational query languages, in: Proceedings of the 14th ACM Symposium on Theory of Computing, 1982, pp. 137–14]</p>
+
+<p>You have seen plenty of proofs. But what <em>is</em> a proof, in a formal sense? There are as many answers to this question as there are <em>proof systems</em>. But what is a proof system, you ask? Well, well, well… I don’t know.</p>
+
+<p>Propositional proof system as in Cook and Reckhow, 1979.</p>
+
+<p>A proof is a series of steps that combines axioms with derivation rules in various ways to arrive to the theorem proved. [concrete example]. &lt;- Frege proof systems, Reckhow 1976.  <em>On the lengths of proofs in the propositional calculus</em>. PhD thesis, University of Toronto.</p>
+
+<p>The set of axioms and derivation rules is called a proof system. This style [what style] of proof systems is called Frege systems. [probably should talk more about Frege.] Reckhow and Cook proved that all Frege systems equivalent up to polynomial time (or something like this.)</p>
+
+<p>Back to the original question: what is proof complexity? We said that it is to classify how easy it is to prove a statement in propositional logic. But how do we measure the easiness of which we can prove a theorem? One way is to measure the proof length. 
+[Q: Are there other proof complexity measures?]
+[Q; Why is proof length a good measure?]</p>
+
+<p>Now, the main problem in proof complexity is the question: is there a hard theorem? What this means exactly is: is there a theorem such that its shortest proof, in Frege systems, has a super-polynomial lower bound? This is the motivation and goal of proof complexity.. in a sense, and everything is based on answering this question. So.. what attempts have been made to answer it? Many proof systems have been invented.. many direction are taken.. and we will survey these efforts (biased towards my interests) in this article.</p>
+
+<p>Algebraic Proof Complexity: Progress, Frontiers and Challenges by Toniann Pitassi and Iddo Tzameret</p>
+
+<ul>
+  <li>
+    <p>Resolution Refutation Systems: Nordström, J. (2015). On the interplay between proof complexity and sat solving. <em>ACM SIGLOG News</em>, 2(3):19–44.</p>
+  </li>
+  <li>
+    <blockquote>
+      <p>But the major open questions in proof complexity, those originating from boolean circuit complexity and complexity class separations, such as P vs. NP, are about the length of <em>much stronger</em> proof systems than resolution, and these stronger systems will be the focus of this survey.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>The prototypical strong proof system is the standard Hilbert-style propositional proof system, called <em>Frege proof system</em>, in which a proof starts from a fixed finite set of axioms and derives new propositional <em>formulas</em> using a fixed set of sound derivation rules. Establishing any super-polynomial size lower bound on such proofs (in terms of the size of the formula proved) is a major open problem in proof complexity, and a fundamental question in complexity theory.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>establishing super-polynomial lower bounds for <em>every</em> propositional proof system would separate NP from coNP (and thus also P from NP).
+[Cook and Reckhow, 1979] Cook, S. A. and Reckhow, R. A. (1979). The relative efficiency of propositional proof systems. <em>J. Symb. Log.</em>, 44(1):36–50. This is a journal-version of Cook-Reckhow [Cook and Reckhow, 1974a] and Reckhow [Reckhow, 1976].</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>Frege systems are considered strong for several reasons. First, no super-polynomial lower bounds are known for Frege proofs, and moreover proving such lower bounds seems to be out of reach of current techniques, and believed by some to be even harder than proving explicit circuit lower bounds [Razborov, 2015]</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>See [Bonet et al., 1995,Razborov, 2015,Kraj ́ıˇcek, 2011,Li and Tzameret, 2013] for further discussions on hard proof complexity candidates.</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>An <strong>Extended Frege</strong> proof system is obtained by augmenting Frege with the axiom: \(\text{Extension Axiom: } z \iff \varphi\) 
+where $z$ is any <em>new</em> variable (namely, a variable that does not occur before in the proof) and $\varphi$ is any formula (that does not contain $z$), and where the new variables $z$ appearing in the extension axiom does not occur in the final formula in the proof. The point of the extension axiom is to allow the use of new variables to represent intermediate subformulas in a proof; with this new axiom scheme, polynomial-size Extended Frege proofs can reason about propositions computable by polynomial-size circuits (rather than just propositions computable by polynomial-size formulas, as is the case for polynomial-size Frege proofs).</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“For comprehensive texts on proof complexity and strong proof systems see e.g., the monograph by Kraj ́ıˇcek [Kraj ́ıˇcek, 1995] and [Clote and Kranakis, 2002, Chapter 5].”</p>
+
+      <ul>
+        <li>Kraj ́ıˇcek, J. (1995). <em>Bounded arithmetic, propositional logic, and complexity theory</em>, volume 60 of <em>Encyclopedia of Mathematics and its Applications</em>. Cambridge University Press, Cambridge.</li>
+        <li>Clote, P. and Kranakis, E. (2002). <em>Boolean functions and computation models</em>. Texts in Theoretical Computer Science. An EATCS Series. Springer-Verlag, Berlin.</li>
+      </ul>
+    </blockquote>
+  </li>
+</ul>
+
+<p>I have to tie together the relation between the different proof systems: Frege, Extended Frege, IPS, etc..</p>
+
+<ul>
+  <li>Algebraic Proof Systems
+    <ul>
+      <li>Nullstellensatz, IPS</li>
+      <li>Polynomial Calculus</li>
+      <li>Cuttin Planes</li>
+      <li>Sum of Squares</li>
+      <li>CPS (?), Semi-algebraic geometry and the Positivstellensatz</li>
+    </ul>
+  </li>
+  <li>Geometric Proof Systems</li>
+  <li>Other Proof Systems</li>
+</ul>
+
+<h1 id="propositional-proof-systems">Propositional Proof Systems</h1>
+
+<p>Bounded Arithmetics, Propositional Logic, and Complexity Theory - Jan Krajicek</p>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><em>A</em> propositional proof system <em>is a polynomial time function \(P\) whose range is the set \(TAUT\)</em>
+<em>For a tautology \(\tau \in TAUT\), any string \(w\) such that \(P(w) = z\) is called a</em> P-proof of \(\tau\).</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <table>
+        <tbody>
+          <tr>
+            <td><strong>Fundamental problem.</strong> *Is there a propositional proof system \(P\) in which every tautology has a polynomial size proof? That is, are there a proof system \(P\) and a polynomial \(p(x)\) such that any tautology \(\tau\) has a \(P\)-proof of size at most $$p(</td>
+            <td>\tau</td>
+            <td>)$$?*</td>
+          </tr>
+        </tbody>
+      </table>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>Theorem 4,1.2</strong> (Cook and Reckhow 1979). <em>There exists a propositional proof system in which every tautology has a polynomial size proof if and only if the class NP is closed under complementation: NP = coNP.</em></p>
+    </blockquote>
+  </li>
+  <li>If a proof system \(P\) is poly-bounded (all proofs are of poly length) then any proof system \(Q\) such that \(P \leq Q\) is also poly-bounded. (With the poly-time simulation definition of \(\leq\)).
+In particular, the goal is then to find a proof system \(R\) such that \(R \leq Frege\) AND \(R\) is poly-bounded..</li>
+</ul>
+
+<h2 id="resolution">Resolution</h2>
+
+<ul>
+  <li>PHP</li>
+</ul>
+
+<h2 id="sequent-calculus">Sequent Calculus</h2>
+
+<h2 id="frege-systems">Frege Systems</h2>
+
+<ul>
+  <li>Cook, Reckhow: Equivalence of all Frege systems..</li>
+</ul>
+
+<h2 id="extended-frege-systems">Extended Frege Systems</h2>
+
+<h1 id="comparing-two-proof-systems-simulation">Comparing Two Proof Systems (simulation)</h1>
+
+<h1 id="weaker-systems-and-known-lower-bounds">Weaker systems and known lower bounds</h1>
+
+<ul>
+  <li>Resolution Refutation Systems Nordström, J. (2015). On the interplay between proof complexity and sat solving. <em>ACM SIGLOG News</em>, 2(3):19–44.
+    <ul>
+      <li>Feasible interpolation</li>
+    </ul>
+  </li>
+  <li>Sequent Calculus</li>
+</ul>
+
+<h1 id="main-problem">Main Problem</h1>
+
+<p>Imagine, the whole problem is just to find a theorem, any theorem that has a super-polynomial lower bound. One might think that this freedom in constructing any such theorem would make the question easier than if it was just one theorem and we know it is “complete”, in the sense that if we found a poly-time proof of it, then all theorems have a poly-time proof. [&lt;- interesting notion! isn’t this similar to an upper bound result? maybe partially, and a possible technique]</p>
+
+<h1 id="interactive-proofs-krajicek-1995">Interactive Proofs? [Krajicek 1995]</h1>
 
       </div>
     </main>
@@ -85,3 +262,4 @@
   </body>
 
 </html>
+

@@ -288,6 +288,7 @@ table {
   list-style: none;
   display: inline-block;
   counter-reset: level-one;
+  font-size: 95%;
 }
 
 #markdown-toc li::before {
