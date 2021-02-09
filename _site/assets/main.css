@@ -81,6 +81,8 @@ table td { border: 1px solid #e8e8e8; }
 /* Table of contents style */
 #markdown-toc::before { content: "Contents"; font-weight: bold; }
 
+.footnotes { font-size: 18.375px; }
+
 #markdown-toc { border: 1px solid #aaa; padding: 1.5em; padding-top: 0.5em; padding-bottom: 0.5em; list-style: none; display: inline-block; counter-reset: level-one; font-size: 95%; }
 
 #markdown-toc li::before { counter-increment: level-one; content: counters(level-one, ".") " "; }
