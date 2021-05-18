@@ -160,7 +160,7 @@ Here is how we prove that a formula $$\tau$$ is a tautology in IPS:
 - Notice that $$\tau$$ is a tautology iff its negation is unsatisfiable, by design (of the translation) this happens iff the set of polynomials do not have a common root, by Nullstellensatz this happens iff there is a $$g_1, g_2, \ldots, g_m$$ such that  $$\sum{f_i g_i} = 1$$.
 - The set of polynomials $$g_1, g_2, \ldots, g_m$$ *is the proof*. To capture this, IPS requires coming up with a circuit $C$ such that:
   - $$C(\vec{x}, 0) = 0$$ (this makes sure that the polynomial expressed by $$C$$ is of the form $$\sum f_ig_i$$)
-  - $$C(\vec{x}, f_1(\vec{x}), f_2(\vec{x}), \ldots, f_m(\vec{x})) = 1$$
+  - $$C(\vec{x}, f_1(\vec{x}), f_2(\vec{x}), \ldots, f_m(\vec{x})) = 1$$.
 
 The size of the proof is the size of the circuit $$C$$.  
 
@@ -171,6 +171,8 @@ IPS polynomially simulates Extended Frege (and transitively, $$AC^0[p]$$, and Fr
 If PIT axioms have p-bounded proofs, then AC^0[p]-Frege is equivalent to IPS, Frege, and Extended Frege, which can explain the apparent difficulty of proving super-polynomial lower bounds for it.
 
 > Theorem 1.2 (Brief; see Section 4 for the full statement). Super-polynomial lower bounds for the Ideal Proof System imply that the permanent does not have polynomial-size algebraic circuits, that is, $$VNP\not=VP$$ (a long-standing and impactful problem).
+>
+> **Circuit complexity, proof complexity, and polynomial identity testing: The ideal proof system** by Joshua Grochow, and Toniann Pitassi
 
 # Final remarks
 
