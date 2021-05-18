@@ -4,7 +4,7 @@ title: "Proof complexity, informally"
 author: Mosaad Al Thokair
 date: 2021-05-18
 excerpt: "A fun excursion through the hills of proof systems"
-image: "/assets/images/proofcomplexity/featured-image.png"
+image: "/assets/images/proofcomplexity/featured-image.jpg"
 ---
 
 * Table of Contents
