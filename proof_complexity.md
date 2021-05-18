@@ -145,7 +145,13 @@ Given a set of mult-variable polynomials$$f_1, f_2, \ldots, f_n$$ <!---[$$p(\vec
 
 ## IPS
 
-The idea of IPS is to translate a propositional formula to a set of polynomials in such a way that the logical formula is satisfiable iff the corresponding polynomials have a common solution (i.e. $$p_1(\vec{x}) = p_2(\vec{x}) = ... = 0$$ for some $$\vec{x}$$.) Below is the explicit translation used: $$tr(x) = 1-x$$; $$tr(\lnot A) = 1 - tr(A)$$; and $$tr(A \lor B) = tr(A)tr(B)$$.
+The idea of IPS is to translate a propositional formula to a set of polynomials in such a way that the logical formula is satisfiable iff the corresponding polynomials have a common solution (i.e. $$p_1(\vec{x}) = p_2(\vec{x}) = ... = 0$$ for some $$\vec{x}$$.) Below is the explicit translation used: 
+
+$$tr(x) = 1-x \\$$
+
+$$tr(\lnot A) = 1 - tr(A) \\$$
+
+$$tr(A \lor B) = tr(A)tr(B)$$
 
 Notice that we are not giving a translation for 'and' because we are only interested in translating clauses of a CNF formula. Each clause will be a separate polynomial.
 
