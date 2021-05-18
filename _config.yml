@@ -19,6 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 markdown: kramdown
 title: مدونة مساعد
+title_en: "Mosaad's blog"
 description: التفكير من خلال الكتابة
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://althukairm.github.io" # the base hostname & protocol for your site, e.g. http://example.com

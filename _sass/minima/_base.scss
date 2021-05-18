@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body {
+body:dir(ltr) {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
@@ -28,8 +28,8 @@ body {
   flex-direction: column;
 }
 
-body:lang(ar) {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $arabic-font-family;
+body:dir(rtl) {
+  font: $base-font-weight #{$ar-font-size}/#{$base-line-height} $arabic-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -143,7 +143,8 @@ a {
 /**
  * Blockquotes
  */
-blockquote {
+
+blockquote:dir(rtl) {
   color: $grey-color;
   border-right: 4px solid $grey-color-light;
   padding-right: $spacing-unit / 2;
@@ -154,6 +155,19 @@ blockquote {
     margin-bottom: 0;
   }
 }
+
+blockquote:dir(ltr) {
+  color: $grey-color;
+  border-left: 4px solid $grey-color-light;
+  padding-left: $spacing-unit / 2;
+  @include relative-font-size(1.125);
+  font-style: italic;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
 
 
 
