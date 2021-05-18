@@ -145,11 +145,7 @@ Given a set of mult-variable polynomials$$f_1, f_2, \ldots, f_n$$ <!---[$$p(\vec
 
 ## IPS
 
-The idea of IPS is to translate a propositional formula to a set of polynomials in such a way that the logical formula is satisfiable iff the corresponding polynomials have a common solution (i.e. $$p_1(\vec{x}) = p_2(\vec{x}) = ... = 0$$ for some $$\vec{x}$$.) Below is the explicit translation used:
-
-$$tr(x) = 1-x$$
-$$tr(\lnot A) = 1 - tr(A)$$
-$$tr(A \lor B) = tr(A)tr(B)$$
+The idea of IPS is to translate a propositional formula to a set of polynomials in such a way that the logical formula is satisfiable iff the corresponding polynomials have a common solution (i.e. $$p_1(\vec{x}) = p_2(\vec{x}) = ... = 0$$ for some $$\vec{x}$$.) Below is the explicit translation used: $$tr(x) = 1-x$$; $$tr(\lnot A) = 1 - tr(A)$$; and $$tr(A \lor B) = tr(A)tr(B)$$.
 
 Notice that we are not giving a translation for 'and' because we are only interested in translating clauses of a CNF formula. Each clause will be a separate polynomial.
 
@@ -158,7 +154,7 @@ Here is how we prove that a formula $$\tau$$ is a tautology in IPS:
 - Negate $$\tau$$ and convert it to CNF
 - Translate the CNF clauses to a set of polynomials as mentioned above
 - Notice that $$\tau$$ is a tautology iff its negation is unsatisfiable, by design (of the translation) this happens iff the set of polynomials do not have a common root, by Nullstellensatz this happens iff there is a $$g_1, g_2, \ldots, g_m$$ such that  $$\sum{f_i g_i} = 1$$.
-- The set of polynomials $$g_1, g_2, \ldots, g_m$$ *is the proof*. To capture this, IPS requires coming up with a circuit $C$ such that:
+- The set of polynomials $$g_1, g_2, \ldots, g_m$$ *is the proof*. To capture this, IPS requires coming up with a circuit $$C$$ such that:
   - $$C(\vec{x}, 0) = 0$$ (this makes sure that the polynomial expressed by $$C$$ is of the form $$\sum f_ig_i$$)
   - $$C(\vec{x}, f_1(\vec{x}), f_2(\vec{x}), \ldots, f_m(\vec{x})) = 1$$.
 
