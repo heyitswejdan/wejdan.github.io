@@ -42,15 +42,17 @@ There are also some pre-requisites that I think are going to increase your appre
 
 # Ok, but what *is* proof complexity?
 
-We will start with the paper that started it all, the 1987 Cook-Reckhow paper. But first, consider the following two scenarios:
+We will start with the paper that started it all, the 1979 Cook–Reckhow paper [2]. But first, consider the following two scenarios: 
 
 It is easy to convince your friend that a given (from now on, propositional)<!---[footnote: what does 'propositional' mean?]---> formula is not a tautology <!---(footnote: tautology definition)--->. Simply give them an assignment that evaluates the formula to *false*. Finding this assignment might be hard, but once you find it, they have no reason not to believe you. Any set (language) that has the property that you can easily verify the refutation of membership claims is in the class of problems called $$coNP$$. The set of tautologies $$TAUT$$, then, is in $$coNP$$. 
 
 On the other hand, how easy is it to convince your friend that a formula *is* a tautology? We convince one another of the correctness of our claims via *proofs*. So the question becomes how easy is it for your friend to understand a proof you present? If you present a very long proof that would surely make it harder to understand. Persuasion and understanding are fuzzy concepts, but we can use the well-established concepts of computational resources needed to verify the proof's correctness. Similar to $$coNP$$, $$NP$$ is defined as the class of languages that have an easily verifiable proof of membership. The main question of proof complexity is whether $$TAUT \in NP$$.
 
-Cook and Reckhow laid out a plan to answer this question in 1987:
+Cook and Reckhow laid out a plan to answer this question: 
 
-> The question of whether TAUT is in NP is equivalent to whether there is a propositional proof system in which every tautology has a short proof, provided "proof system" and "short" are properly defined. - Cook-Reckhow
+> The question of whether TAUT is in NP is equivalent to whether there is a propositional proof system in which every tautology has a short proof, provided "proof system" and "short" are properly defined. 
+>
+> — Cook & Reckhow [2]
 
 So the question of whether $$TAUT \in NP$$ is now 'reduced' to whether there is a "proof system in which every tautology has a short proof".
 
@@ -58,7 +60,7 @@ Before discussing strategy, progress, and open questions, what are the implicati
 
 - If there is no proof system that can prove tautologies efficiently, then $$TAUT \not \in NP$$ which means that $$NP \not= coNP$$, which implies that $$P \not= NP$$ <!---[footnote: you can see that because $$P = coP$$]---> and we're done.
 
-- If $$TAUT \in NP$$ and $$NP = coNP$$, then first of all we have short proofs, which is fantastic, but this also implies a lot of interesting things.. e.g. the "polynomial heirarchy" $$PH$$ collapses and we have $$NP = PH$$ which implies $$BPP \subseteq NP$$ (Sipser Lautemann) i.e. any problem solved efficiently using a randomized algorithm can be easily verified.
+- If $$TAUT \in NP$$ and $$NP = coNP$$, then first of all we have short proofs, which is fantastic, but this also implies a lot of interesting things.. e.g. the "polynomial heirarchy" $$PH$$ collapses and we have $$NP = PH$$ which implies $$BPP \subseteq NP$$ (Sipser–Lautemann [14, 8]) i.e. any problem solved efficiently using a randomized algorithm can be easily verified.
 
 The authors conjecture that an efficient proof system does not exist. To prove this conjecture, we would have to prove that for *every* proof system there is at least one formula that has no short proof. This is a monumental task, but one thing is sure: we first have to prove lower bounds for weak proof systems and work our way upwards. A central question in proof complexity is whether a very natural class of proof systems called Frege has super-polynomial lower bounds. But even the answer to this question is hard.
 
@@ -92,7 +94,7 @@ We measure the efficiency of proof systems by proof size. One of the achievement
 
 A proof system $$A$$  polynomially simulates another proof system $$B$$ if there is a way to translate every proof in $$B$$ to a proof in $$A$$ while maintaining a polynomial blow-up in the proof size. Sometimes, two proof systems simulate each other. In that case, we say that the two proof systems are polynomially equivalent. 
 
-From this, we can see a semi-ordering of proof systems. A question posed by J. Krajíček and P. Pudlák (1989) <!---proper citation---> is whether this chain of proof systems end in an optimal proof system, i.e. a proof system that polynomially simulates every other proof system. This is still an open question. However, Krajíček and Pudlák were able to show that if $$EXP = NEXP$$ then such a proof system exists (notice that this is a sufficient but not a necessary condition).
+From this, we can see a semi-ordering of proof systems. A question posed by J. Krajíček and P. Pudlák in 1989 [6] is whether this chain of proof systems end in an optimal proof system, i.e. a proof system that polynomially simulates every other proof system. This is still an open question. However, Krajíček and Pudlák ([6] as cited in [9]) were able to show that if $$EXP = NEXP$$ then such a proof system exists (notice that this is a sufficient but not a necessary condition).
 
 The landscape of proof systems is starting to shape up, but there is still a lot of mysteries. In what follows, we will go in a brief journey through the "hills" of proof systems. We will start with the weaker (less efficient) ones with a known lower bound, and then progressively move towards more sophisticated proof systems.
 
@@ -100,11 +102,11 @@ The landscape of proof systems is starting to shape up, but there is still a lot
 
 Below is the tl;dr for this section.
 
-> Haken [23] showed super-polynomial  lower  bounds  on  the  size  of  proofs  of  the Pigeonhole Principle in the Resolution proof system. Ajtai [3] obtained a significant extension of this result by showing that the Pigeonhole Principle is also super-polynomially hard for Bounded-Depth Frege - a restricted version of the standard Frege system where the lines are bounded-depth circuits. 
+> Haken [5] showed super-polynomial  lower  bounds  on  the  size  of  proofs  of  the Pigeonhole Principle in the Resolution proof system. Ajtai [1] obtained a significant extension of this result by showing that the Pigeonhole Principle is also super-polynomially hard for Bounded-Depth Frege - a restricted version of the standard Frege system where the lines are bounded-depth circuits. 
 >
-> — **Why are Proof Complexity Lower Bounds Hard?** Jan Pich and Rahul Santhanam
+> — **Why are Proof Complexity Lower Bounds Hard?** Jan Pich and Rahul Santhanam [10]
 
-<!--- appropriately import ciations--->
+
 
 The idea behind the resolution proof is that it shows that the negation of the tautology is not satisfiable (i.e. always false under any assignment). The only inference rule used is  the 'resolution rule', which states that given two clauses $$(\alpha \lor \beta)$$ and $$(\lnot \beta \lor \gamma)$$ you can conclude $$(\alpha \lor \gamma)$$, where $$\alpha, \beta, \gamma$$ are either propositions or formulas. A proof is just repeated application of this rule on the [CNF](https://en.wikipedia.org/wiki/Conjunctive_normal_form) of the negated tautology until the empty clause is reached. 
 
@@ -124,11 +126,11 @@ Although Frege systems are polynomially equivalent regardless of axioms and infe
 
 ## Bounded-depth Frege
 
-One variant of Frege is the bounded-depth Frege proof system. In this proof system, proofs are allowed to have *fixed depth* formulas only <!---[footnote: fixed depth formula example]--->. As mentioned previously, Ajtai proved super-polynomial lower bounds for bounded-depth Frege systems, which were later improved by [Krajicek, Pudlak, and Woods 1995 and Pitassi, Beame, Impagliazzo 1993...] to truly exponential lower bounds. <!---proper citations--->
+One variant of Frege is the bounded-depth Frege proof system. In this proof system, proofs are allowed to have *fixed depth* formulas only <!---[footnote: fixed depth formula example]--->. As mentioned previously, Ajtai proved super-polynomial lower bounds for bounded-depth Frege systems, which were later improved by Krajicek, Pudlak, and Woods [7] and Pitassi, Beame, Impagliazzo [11] to truly exponential lower bounds.
 
 ## $$AC^0[p]$$-Frege
 
-Another variant of Frege is the $$AC^0[p]$$-Frege, where formulas in a proof are allowed to look like $$AC^0[p]$$ circuits, i.e. constand depth $$d$$, unbounded fan-in (i.e. its operators take an arbitrary number of input bits), and in addition to the classic logical gates we have $$\mod p$$ gates for a fixed prime $$p$$ with additional axioms related to the $$\mod p$$ gates. Apparently, adding the mod gates adds some power to the proof system. However, no lower bounds are known for this proof system (although the corresponding lower bounds in circuit complexity were obtained independently by Razborov and Smolensky in 1987). $$AC^0[p]$$-Frege is a very interesting proof system to try and get lower bounds for because 1) it can illuminate barriers, 2) its lower bounds are believed to be more feasible than the unrestricted Frege; and 3) exponential lower bounds for it yield super-polynomial lower bounds for unrestricted Frege (Filmus, Pitassi, and Santhanam 2011).
+Another variant of Frege is the $$AC^0[p]$$-Frege, where formulas in a proof are allowed to look like $$AC^0[p]$$ circuits, i.e. constand depth $$d$$, unbounded fan-in (i.e. its operators take an arbitrary number of input bits), and in addition to the classic logical gates we have $$\mod p$$ gates for a fixed prime $$p$$ with additional axioms related to the $$\mod p$$ gates. Apparently, adding the mod gates adds some power to the proof system. However, no lower bounds are known for this proof system (although the corresponding lower bounds in circuit complexity were obtained independently by Razborov and Smolensky in 1987 [13, 15]). $$AC^0[p]$$-Frege is a very interesting proof system to try and get lower bounds for because 1) it can illuminate barriers, 2) its lower bounds are believed to be more feasible than the unrestricted Frege; and 3) exponential lower bounds for it yield super-polynomial lower bounds for unrestricted Frege [3].
 
 ## Extended Frege
 
@@ -138,7 +140,7 @@ The landscape of proof systems is not limited to Frege systems. There are other 
 
 # Algebraic proof systems
 
-Grochow and Pitassi (2018) <!---proper citation---> proposed the Ideal Proof System (IPS) that established strong connections between circuit complexity and proof complexity while hoping to utilize algebraic geometry tools to establish lower bounds for both. Proofs in IPS are algebraic circuits. Lower bounds for IPS imply lower bounds for Frege and even Extended Frege. A central theorem used in this proof system is the Hilbert's Nullstellensatz, which is a beautiful theorem in algebraic geomtry <!---[link to the book 'invitation to algebraic geometry']---> that is at the heart of a class of algebraic proof systems. By translating logical formulas into polynomials, the algebraic proof systems take advantage of this powerful theorem. 
+Grochow and Pitassi [4] proposed the Ideal Proof System (IPS) that established strong connections between circuit complexity and proof complexity while hoping to utilize algebraic geometry tools to establish lower bounds for both. Proofs in IPS are algebraic circuits. Lower bounds for IPS imply lower bounds for Frege and even Extended Frege. A central theorem used in this proof system is the Hilbert's Nullstellensatz, which is a beautiful theorem in algebraic geomtry <!---[link to the book 'invitation to algebraic geometry']---> that is at the heart of a class of algebraic proof systems. By translating logical formulas into polynomials, the algebraic proof systems take advantage of this powerful theorem. 
 
 ## Nullstellensatz, simplified
 Given a set of mult-variable polynomials$$f_1, f_2, \ldots, f_n$$ <!---[$$p(\vec{x}) = x_1^2 + x_2^5 - x_3$$ is an example of a multi-variable polynomial]--->, the set does not have a common root $$\vec{x}$$ iff . there is a set of polynomials $$g_1, g_2, .., g_n$$ such that $$\sum{f_i g_i} = 1$$. 
@@ -174,7 +176,7 @@ If PIT axioms have p-bounded proofs, then AC^0[p]-Frege is equivalent to IPS, Fr
 
 > Theorem 1.2 (Brief; see Section 4 for the full statement). Super-polynomial lower bounds for the Ideal Proof System imply that the permanent does not have polynomial-size algebraic circuits, that is, $$VNP\not=VP$$ (a long-standing and impactful problem).
 >
-> **Circuit complexity, proof complexity, and polynomial identity testing: The ideal proof system** by Joshua Grochow, and Toniann Pitassi
+> **Circuit complexity, proof complexity, and polynomial identity testing: The ideal proof system** by Joshua Grochow, and Toniann Pitassi [1]
 
 # Final remarks
 
@@ -183,3 +185,35 @@ Two questions excite me when talking about proof complexity:
 1- Why is proving super-polynomial lower bounds for $$AC^0[p]$$-Frege taking more than 30 years after proving the corresponding lower bounds for circuit complexity? We don't even have barrier results like relativization or natural proofs that rule out a class of techniques/approaches. 
 
 2- Sufficienct conditions have been established (and later improved) for the existence of "optimal" proof systems. Can we (dis)prove this unconditionally?
+
+# References
+
+[1] Ajtai, M. 1994. “The Complexity of the Pigeonhole Principle.” *Combinatorica* 14 (4): 417–33. https://doi.org/10.1007/BF01302964.
+
+[2] Cook, Stephen A., and Robert A. Reckhow. 1979. “The Relative Efficiency of Propositional Proof Systems.” *Journal of Symbolic Logic* 44 (1): 36–50. https://doi.org/10.2307/2273702.
+
+[3] Filmus, Yuval, Toniann Pitassi, and Rahul Santhanam. 2015. “Exponential Lower Bounds for AC0-Frege Imply Superpolynomial Frege Lower Bounds.” *ACM Trans. Comput. Theory* 7 (2). https://doi.org/10.1145/2656209.
+
+[4] Grochow, Joshua A., and Toniann Pitassi. 2018. “Circuit Complexity, Proof Complexity, and Polynomial Identity Testing: The Ideal Proof System.” *J. ACM* 65 (6). https://doi.org/10.1145/3230742.
+
+[5] Haken, Armin. 1985. “The Intractability of Resolution.” *Theoretical Computer Science* 39: 297–308. https://doi.org/10.1016/0304-3975(85)90144-6.
+
+[6] Krajíček, Jan, and Pavel Pudlák. 1989. “Propositional Proof Systems, the Consistency of First Order Theories and the Complexity of Computations.” *The Journal of Symbolic Logic* 54 (3): 1063–79.
+
+[7] Krajíček, Jan, Pavel Pudlák, and Alan Woods. 1995. “An Exponential Lower Bound to the Size of Bounded Depth Frege Proofs of the Pigeonhole Principle.” *Random Structures & Algorithms* 7 (1): 15–39. https://doi.org/10.1002/rsa.3240070103.
+
+[8] Lautemann, Clemens. 1983. “BPP and the Polynomial Hierarchy.” *Information Processing Letters* 17 (4): 215–17. https://doi.org/10.1016/0020-0190(83)90044-3.
+
+[9] Messner, Jochen, and Jacobo Torán. 1998. “Optimal Proof Systems for Propositional Logic and Complete Sets.” In *STACS 98*, edited by Michel Morvan, Christoph Meinel, and Daniel Krob, 477–87. Berlin, Heidelberg: Springer Berlin Heidelberg.
+
+[10] Pich, Jan, and Rahul Santhanam. 2019. “Why Are Proof Complexity Lower Bounds Hard?” In *2019 IEEE 60th Annual Symposium on Foundations of Computer Science (FOCS)*, 1305–24. https://doi.org/10.1109/FOCS.2019.00080.
+
+[11] Pitassi, Toniann, Paul Beame, and Russell Impagliazzo. 1993. “Exponential Lower Bounds for the Pigeonhole Principle.” *Computational Complexity* 3 (2): 97–140. https://doi.org/10.1007/BF01200117.
+
+[12] Pudlák, Pavel. 1986. “On the Length of Proofs of Finitistic Consistency Statements in First Order Theories.” In *Logic Colloquium ’84*, edited by J. B. Paris, A. J. Wilkie, and G. M. Wilmers, 120:165–96. Studies in Logic and the Foundations of Mathematics. Elsevier. https://doi.org/10.1016/S0049-237X(08)70462-2.
+
+[13] Razborov, A. A. 1987. “Lower Bounds on the Size of Bounded Depth Circuits over a Complete Basis with Logical Addition.” *Mathematical Notes of the Academy of Sciences of the USSR* 41 (4): 333–38. https://doi.org/10.1007/BF01137685.
+
+[14] Sipser, Michael. 1983. “A Complexity Theoretic Approach to Randomness.” In *PROCEEDINGS OF THE 15TH ANNUAL ACM SYMPOSIUM ON THEORY OF COMPUTING*, 330–35.
+
+[15] Smolensky, R. 1987. “Algebraic Methods in the Theory of Lower Bounds for Boolean Circuit Complexity.” In *Proceedings of the Nineteenth Annual ACM Symposium on Theory of Computing*, 77–82. STOC ’87. New York, NY, USA: Association for Computing Machinery. https://doi.org/10.1145/28395.28404.
