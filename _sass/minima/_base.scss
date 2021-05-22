@@ -92,8 +92,12 @@ figcaption {
 /**
  * Lists
  */
-ul, ol {
+ul, ol:dir(ltr) {
   margin-right: $spacing-unit;
+}
+
+ul, ol:dir(rtl) {
+  margin-left: $spacing-unit;
 }
 
 li {
@@ -110,6 +114,12 @@ li {
  */
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
+}
+
+:not(header) > h1, h2, h3, h4, h5, h6 {
+  text-decoration: underline;
+  text-decoration-color:#dddddd;
+  text-decoration-thickness: 1px;
 }
 
 

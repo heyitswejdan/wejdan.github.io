@@ -172,11 +172,11 @@ A few interesting facts about IPS proved in the Grochow, Pitassi paper:
 
 IPS polynomially simulates Extended Frege (and transitively, $$AC^0[p]$$, and Frege). This means that proving super-polynomial lower bounds for IPS imply super-polynomial lower bounds for Extended Frege.
 
-If PIT axioms have p-bounded proofs, then AC^0[p]-Frege is equivalent to IPS, Frege, and Extended Frege, which can explain the apparent difficulty of proving super-polynomial lower bounds for it.
+If PIT axioms have p-bounded proofs, then $$AC^0[p]$$-Frege is equivalent to IPS, Frege, and Extended Frege, which can explain the apparent difficulty of proving super-polynomial lower bounds for it.
 
 > Theorem 1.2 (Brief; see Section 4 for the full statement). Super-polynomial lower bounds for the Ideal Proof System imply that the permanent does not have polynomial-size algebraic circuits, that is, $$VNP\not=VP$$ (a long-standing and impactful problem).
 >
-> **Circuit complexity, proof complexity, and polynomial identity testing: The ideal proof system** by Joshua Grochow, and Toniann Pitassi [1]
+> **Circuit complexity, proof complexity, and polynomial identity testing: The ideal proof system** by Joshua Grochow, and Toniann Pitassi [4]
 
 # Final remarks
 
