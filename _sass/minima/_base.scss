@@ -13,7 +13,7 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
-body:dir(ltr) {
+body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
@@ -27,22 +27,6 @@ body:dir(ltr) {
   min-height: 100vh;
   flex-direction: column;
 }
-
-body:dir(rtl) {
-  font: $base-font-weight #{$ar-font-size}/#{$base-line-height} $arabic-font-family;
-  color: $text-color;
-  background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-     -moz-font-feature-settings: "kern" 1;
-       -o-font-feature-settings: "kern" 1;
-          font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
 
 
 /**
@@ -92,11 +76,11 @@ figcaption {
 /**
  * Lists
  */
-ul, ol:dir(ltr) {
+ul, ol:dir(rtl) {
   margin-right: $spacing-unit;
 }
 
-ul, ol:dir(rtl) {
+ul, ol:dir(ltr) {
   margin-left: $spacing-unit;
 }
 
@@ -247,12 +231,12 @@ pre {
  */
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     display: inline-block;
     fill: #{$grey-color};
     padding-right: 5px;
-    vertical-align: text-top;
+    vertical-align: text-center;
 }
 
 .social-media-list {
