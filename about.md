@@ -11,3 +11,4 @@ title: "عنّي"
 - [Proof complexity, informally](https://althukairm.github.io/proof_complexity.html)
 - [علم لا ينفع؟](https://althukairm.github.io/2020/10/06/usefulnessofuselessknowledge.html)
 
+صنعت [موزون.com](https://موزون.com) أيضًا كمشروع جانبي؛ أداة للتحقق من صحة وزن البيت الشعري. أسعد باطلاعك عليه.
