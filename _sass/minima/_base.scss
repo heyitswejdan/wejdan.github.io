@@ -144,6 +144,7 @@ blockquote:dir(rtl) {
   padding-right: $spacing-unit / 2;
   @include relative-font-size(1.125);
   font-style: italic;
+  margin-bottom: $spacing-unit;
 
   > :last-child {
     margin-bottom: 0;
@@ -156,6 +157,7 @@ blockquote:dir(ltr) {
   padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   font-style: italic;
+  margin-bottom: $spacing-unit;
 
   > :last-child {
     margin-bottom: 0;
