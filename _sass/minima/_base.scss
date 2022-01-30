@@ -114,14 +114,10 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  font-weight: 800;
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    opacity: .8;
   }
 
   .social-media-list &:hover {
@@ -139,12 +135,13 @@ a {
  */
 
 blockquote:dir(rtl) {
-  color: $grey-color;
-  border-right: 4px solid $grey-color-light;
-  padding-right: $spacing-unit / 2;
+  border-right: 4px solid $brand-color;
+  //padding-right: $spacing-unit / 2;
   @include relative-font-size(1.125);
   font-style: italic;
   margin-bottom: $spacing-unit;
+  background-color: $background-color-light;
+  padding: 2rem 3rem;
 
   > :last-child {
     margin-bottom: 0;
@@ -152,12 +149,13 @@ blockquote:dir(rtl) {
 }
 
 blockquote:dir(ltr) {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
+  border-left: 4px solid $brand-color;
+  //padding-left: $spacing-unit / 2;
   @include relative-font-size(1.125);
   font-style: italic;
   margin-bottom: $spacing-unit;
+  background-color: $background-color-light;
+  padding: 2rem 3rem;
 
   > :last-child {
     margin-bottom: 0;
@@ -203,8 +201,7 @@ pre {
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  padding: $spacing-unit;
   @extend %clearfix;
 
   @include media-query($on-laptop) {
@@ -288,7 +285,8 @@ table {
 
 .footnotes {
   font-size: $small-font-size;
-  border-top: 1px solid $grey-color-dark;
+  border-top: 1px solid $background-color-lighter;
+  padding: 1rem;
 }
 
 

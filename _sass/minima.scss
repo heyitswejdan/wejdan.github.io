@@ -14,9 +14,15 @@ $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #111 !default;
-$background-color: #fdfdfd !default;
-$brand-color:      #2a7ae2 !default;
+//$text-color:       #111 !default;
+$text-color:       #fff !default;
+//$background-color: #fdfdfd !default;
+$background-color: #282c35 !default;
+$background-color-light: lighten($background-color, 3%) !default;
+$background-color-lighter: lighten($background-color, 40%) !default;
+//$brand-color:      #2a7ae2 !default;
+$brand-color:      #8e6eca !default;
+
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
