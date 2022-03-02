@@ -11,20 +11,13 @@ image: "/assets/images/proofcomplexity/featured-image.jpg"
 {:toc}
 # Meta-matters
 
-## Why am I writing this article?
-
-I think proof complexity is cool and I would like to share it with as many people as possible. Towards that end, I will optimize for simplicity while writing in the hope that this 1) will remove the barriers for getting into the subject and 2) will give motivation for those who might find this topic interesting to read more about it. 
-And for the sake of complete honesty, I also have an ulterior motive: I want to make sure that I understand proof complexity; and I believe that a well-written article is an easily verifiable certificate that the author understands what they are writing about. So... yeah.
-
 ## Why would you care about proof complexity?
 
-I can think of three layers to the answer of this question: the practical, the theoretical, and the philosophical. I will not say much about the practical importance of proof complexity (e.g. its role in SAT solvers which are used in different industries today everywhere from hardware design and verification to scheduling and planning) since this is not an interest of mine. Rather, I will briefly mention its theoretical and philosophical importance.
+Pracrtically, proof complexity plays a role in SAT solvers which are used in different industries today everywhere from hardware design and verification to scheduling and planning. But proof complexity is richer than its applications .
 
-Although the questions of proof complexity are interesting on their own, it was from the start suggested as an approach towards the [million-dollar problem](https://www.claymath.org/millennium-problems) P vs. NP. However, this is not the only connection to computational complexity. As we will see, close connections between proof complexity and circuit complexity have been established. Understanding proof coomplexity has the potential to illuminate our understanding of complexity theory on multiple levels (P vs. NP being the ultimate one).
+Theoretically, proof complexity as an approach to solve the [million-dollar problem](https://www.claymath.org/millennium-problems) P vs. NP. Other connections between proof complexity and circuit complexity have been established as well. Understanding proof coomplexity has the potential to illuminate our understanding of complexity theory on multiple levels (P vs. NP being the ultimate one).
 
-Personally, I think the close connection of proof complexity to the notion of "proof", and therefore to the heart of mathematical thinking, gives it a certain kind of potential to say something interesting about the language of mathematics, the human mind (that created/discovered mathematics), and the nature of knowledge (even if we quantiyf knowledge to be that of mathematics). Of course, like any other intellectual endavor, proof complexity might not live up to all of this potential but such is the risk of taking any intellectual adventure. One just has to make sure that they are having fun during these adventures.
-
-I will end this section with a couple of quotes I found loosely connected to the last point mentioned:
+But the reason I personally care about proof complexity is its close connection to the notion of "proof", and therefore to the heart of mathematical thinking. This gives it a potential to say something interesting about the language of mathematics, the human mind (that created/discovered mathematics), and the nature of knowledge (even if we quantiyf knowledge to be that of mathematical knowledge). I will end this section with a couple of quotes I found loosely connected to this point:
 
 > Mathematics can be seen as a special kind of language developed for the world of virtual objects like points and lines, numbers and equations, sets, spaces, algebras and other occupants of this mathematical world and for our thoughts about them. This language is quite powerful and is akin in many respects to natural languages. And just as a talented poet can describe in few lines or even in few words a thought or a situation for which you or I may need volumes, miraculously short and eloquent proofs which nobody would have dreamt of may exist. I think that at present we have only a tentative understanding of the power of the language of mathematics. 
 >
@@ -38,7 +31,7 @@ I will end this section with a couple of quotes I found loosely connected to the
 
 I will skip the very interesting history and story of the development of the theory of computation because other people have told it beautifully. If you are completely new to this subject, I would suggest reading [The Annotated Turing](https://www.goodreads.com/en/book/show/2333956) by Charles Petzold and [Gödel, Escher, Bach](https://www.goodreads.com/book/show/24113.G_del_Escher_Bach) by Douglas Hofstadter. 
 
-There are also some pre-requisites that I think are going to increase your appreciation of the subject, but I will go over them whenever needed, which include: basic understanding of propositional logic, turing machines, and popular complexity classes. These are fascinating topics on their own. If you haven't already, I would encourage you to explore them.
+There are also some pre-requisites that I think are going to increase your appreciation of the subject, which include: basic understanding of propositional logic, turing machines, and popular complexity classes. These are fascinating topics on their own. If you haven't already, I would encourage you to explore them.
 
 # Ok, but what *is* proof complexity?
 
