@@ -13,9 +13,9 @@ image: "/assets/images/proofcomplexity/featured-image.jpg"
 
 ## Why would you care about proof complexity?
 
-Pracrtically, proof complexity plays a role in SAT solvers which are used in different industries today everywhere from hardware design and verification to scheduling and planning. But proof complexity is richer than its applications .
+Proof complexity plays a major role in understanding the power of SAT solvers, which are used in different industries today everywhere from hardware design and verification to scheduling and planning. But proof complexity is much richer than its applications.
 
-Theoretically, proof complexity as an approach to solve the [million-dollar problem](https://www.claymath.org/millennium-problems) P vs. NP. Other connections between proof complexity and circuit complexity have been established as well. Understanding proof coomplexity has the potential to illuminate our understanding of complexity theory on multiple levels (P vs. NP being the ultimate one).
+Theoretically, proof complexity is an approach to solve the [million-dollar problem](https://www.claymath.org/millennium-problems) P vs. NP. Other connections between proof complexity and circuit complexity have been established as well. Understanding proof coomplexity has the potential to illuminate our understanding of complexity theory on multiple levels (P vs. NP being the ultimate one).
 
 But the reason I personally care about proof complexity is its close connection to the notion of "proof", and therefore to the heart of mathematical thinking. This gives it a potential to say something interesting about the language of mathematics, the human mind (that created/discovered mathematics), and the nature of knowledge (even if we quantiyf knowledge to be that of mathematical knowledge). I will end this section with a couple of quotes I found loosely connected to this point:
 
