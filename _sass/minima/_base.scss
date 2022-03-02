@@ -80,9 +80,11 @@ ul, ol:dir(rtl) {
   margin-right: $spacing-unit;
 }
 
+/**
 ul, ol:dir(ltr) {
   margin-left: $spacing-unit;
 }
+*/
 
 li {
   > ul,
@@ -114,7 +116,6 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
-  font-weight: 800;
 
   &:hover {
     opacity: .8;
@@ -294,8 +295,6 @@ table {
 
 
 #markdown-toc {
-  border: 1px solid #aaa;
-  padding: 1.5em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   list-style: none;
